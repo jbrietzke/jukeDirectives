@@ -31,7 +31,8 @@ juke.directive('doubleClick', function(){
 	return {
 		restrict: 'A',
 		scope: {
-			doubleClick: '&'
+			doubleClick: '&' // triggers the evaluation of the expression. It must have an equivalent attribute in the html... e.g. 
+            // it could also have been called doubleClickAction in js and double-click-action="toggle(main)" in the html
 	},
 	link: function(scope, element) {
 		element.on('dblclick', function() {
